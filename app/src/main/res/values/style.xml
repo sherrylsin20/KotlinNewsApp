@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="searchStyle" parent="Widget.AppCompat.SearchView.ActionBar">
+        <item name="android:queryHint">e.g. Corona Indonesia</item>
+        <item name="android:iconifiedByDefault">true</item>
+        <item name="searchIcon">@null</item>
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="colorControlNormal">@color/blue</item>
+        <item name="android:editTextColor">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/grey</item>
+        <item name="android:fontFamily">@font/monsterrat</item>
+        <item name="android:textSize">8pt</item>
+    </style>
+</resources>

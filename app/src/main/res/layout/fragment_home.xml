@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <SearchView
+        android:id="@+id/searchNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:theme="@style/searchStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:fillColor="#FFFFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pageColor="#00000000"
+            app:radius="6dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonTop"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/roundbutton"
+                android:fontFamily="@font/monsterrat"
+                android:text="Top"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_grey"
+                android:textSize="6pt" />
+
+            <Button
+                android:id="@+id/buttonVaccine"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/roundbutton"
+                android:fontFamily="@font/monsterrat"
+                android:text="Vaccine"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_grey"
+                android:textSize="6pt" />
+
+            <Button
+                android:id="@+id/buttonIndo"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/roundbutton"
+                android:fontFamily="@font/monsterrat"
+                android:text="Indonesia"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_grey"
+                android:textSize="6pt" />
+
+            <Button
+                android:id="@+id/buttonUS"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/roundbutton"
+                android:fontFamily="@font/monsterrat"
+                android:text="USA News"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_grey"
+                android:textSize="6pt" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalSV">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerChild"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
